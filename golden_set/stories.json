@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "user_story": "As a user I want to register on the system using my email so that I can access the system.",
+        "expected_requirements": [
+            "The system shall allow the user to input an email address.",
+            "The system shall validate the email address.",
+            "The system shall ensure the email is not already registered.",
+            "The system shall send an email verification.",
+            "The system shall store the user's information after verification."
+        ]
+    }
+]
