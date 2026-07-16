@@ -13,4 +13,5 @@ def test_pipeline_runs():
         output = run_pipeline(story["user_story"])
 
         assert output is not None
-        assert isinstance(output, dict)
+        assert isinstance(output, list)
+        assert len(output) > 0
