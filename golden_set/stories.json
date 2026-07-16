@@ -8,6 +8,12 @@
             "The system shall ensure the email is not already registered.",
             "The system shall send an email verification.",
             "The system shall store the user's information after verification."
-        ]
+        ],"expected_assignments": [
+    "Backend",
+    "Backend",
+    "Database",
+    "Backend",
+    "Backend"
+  ]
     }
 ]

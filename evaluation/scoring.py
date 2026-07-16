@@ -25,3 +25,12 @@ def keyword_overlap(expected, generated):
     score = len(common) / len(expected_words)
 
     return round(score * 100, 2)
+def assignment_accuracy(expected, generated):
+
+    correct = 0
+
+    for e, g in zip(expected, generated):
+        if e == g:
+            correct += 1
+
+    return round(correct / len(expected) * 100, 2)
