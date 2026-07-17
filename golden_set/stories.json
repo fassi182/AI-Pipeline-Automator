@@ -167,5 +167,121 @@
       "The system shall make attendance records available to students."
     ],
     "expected_assignments": ["Frontend", "Database", "Frontend"]
-  }
+  },{
+  "id": 16,
+  "user_story": "As a user I want to logout.",
+  "expected_requirements": [
+    "The system shall allow users to log out.",
+    "The system shall terminate the current user session.",
+    "The system shall redirect the user to the login page."
+  ],
+  "expected_assignments": [
+    "Frontend",
+    "Backend",
+    "Frontend"
+  ]
+},{
+  "id": 17,
+  "user_story": "As a customer I want to place an online order using multiple payment methods, apply discount coupons, select a delivery address, review my order before confirming it, receive an order confirmation email, and track the shipment so that I can complete my purchase conveniently.",
+  "expected_requirements": [
+    "The system shall allow customers to add products to an order.",
+    "The system shall support multiple payment methods.",
+    "The system shall validate discount coupons.",
+    "The system shall allow customers to select a delivery address.",
+    "The system shall display an order review before confirmation.",
+    "The system shall process the payment securely.",
+    "The system shall save the order information.",
+    "The system shall send an order confirmation email.",
+    "The system shall allow customers to track shipment status."
+  ],
+  "expected_assignments": [
+    "Frontend",
+    "Backend",
+    "Backend",
+    "Frontend",
+    "Frontend",
+    "Backend",
+    "Database",
+    "Backend",
+    "Frontend"
+  ]
+},{
+  "id": 18,
+  "user_story": "As a user I want the system to be faster.",
+  "expected_requirements": [
+    "The system shall improve response time.",
+    "The system shall optimize performance."
+  ],
+  "expected_assignments": [
+    "Backend",
+    "Backend"
+  ]
+},{
+  "id": 19,
+  "user_story": "As a usre i wnat to recive notifcation when my order is shiped.",
+  "expected_requirements": [
+    "The system shall notify users when an order is shipped.",
+    "The system shall display shipment status."
+  ],
+  "expected_assignments": [
+    "Backend",
+    "Frontend"
+  ]
+},{
+  "id": 20,
+  "user_story": "As an administrator I want to create, update, delete and search products so that I can manage the inventory.",
+  "expected_requirements": [
+    "The system shall allow administrators to create products.",
+    "The system shall allow administrators to update products.",
+    "The system shall allow administrators to delete products.",
+    "The system shall allow administrators to search products.",
+    "The system shall restrict product management features to administrators."
+  ],
+  "expected_assignments": [
+    "Backend",
+    "Backend",
+    "Backend",
+    "Frontend",
+    "Backend"
+  ]
+},{
+  "id": 21,
+  "user_story": "As a student I want to download my transcript.",
+  "expected_requirements": [
+    "The system shall allow students to download their transcript.",
+    "The system shall generate the transcript document.",
+    "The system shall verify student identity before download."
+  ],
+  "expected_assignments": [
+    "Frontend",
+    "Backend",
+    "Backend"
+  ]
+},{
+  "id": 22,
+  "user_story": "As a user I want the application to load within two seconds so that I have a better experience.",
+  "expected_requirements": [
+    "The system shall load application pages within two seconds.",
+    "The system shall optimize application performance."
+  ],
+  "expected_assignments": [
+    "Backend",
+    "Backend"
+  ]
+},{
+  "id": 23,
+  "user_story": "As a user I want two-factor authentication during login so that my account remains secure.",
+  "expected_requirements": [
+    "The system shall support two-factor authentication.",
+    "The system shall send a one-time verification code.",
+    "The system shall verify the one-time verification code before login.",
+    "The system shall grant access only after successful verification."
+  ],
+  "expected_assignments": [
+    "Backend",
+    "Backend",
+    "Backend",
+    "Backend"
+  ]
+}
 ]

@@ -1,8 +1,8 @@
 {
-    "task_similarity": 82.88866666666667,
-    "keyword_overlap": 33.188,
-    "assignment_accuracy": 48.0,
-    "overall_score": 54.69222222222222,
+    "task_similarity": 74.73434782608695,
+    "keyword_overlap": 33.53478260869565,
+    "assignment_accuracy": 55.31391304347826,
+    "overall_score": 54.52768115942029,
     "stories": [
         {
             "story_id": 1,
@@ -93,6 +93,54 @@
             "task_similarity": 60.0,
             "keyword_overlap": 37.5,
             "assignment_accuracy": 0.0
+        },
+        {
+            "story_id": 16,
+            "task_similarity": 60.0,
+            "keyword_overlap": 40.0,
+            "assignment_accuracy": 33.33
+        },
+        {
+            "story_id": 17,
+            "task_similarity": 55.56,
+            "keyword_overlap": 33.33,
+            "assignment_accuracy": 22.22
+        },
+        {
+            "story_id": 18,
+            "task_similarity": 40.0,
+            "keyword_overlap": 37.5,
+            "assignment_accuracy": 100.0
+        },
+        {
+            "story_id": 19,
+            "task_similarity": 40.0,
+            "keyword_overlap": 46.15,
+            "assignment_accuracy": 50.0
+        },
+        {
+            "story_id": 20,
+            "task_similarity": 100.0,
+            "keyword_overlap": 31.25,
+            "assignment_accuracy": 80.0
+        },
+        {
+            "story_id": 21,
+            "task_similarity": 60.0,
+            "keyword_overlap": 29.41,
+            "assignment_accuracy": 66.67
+        },
+        {
+            "story_id": 22,
+            "task_similarity": 40.0,
+            "keyword_overlap": 27.27,
+            "assignment_accuracy": 100.0
+        },
+        {
+            "story_id": 23,
+            "task_similarity": 80.0,
+            "keyword_overlap": 28.57,
+            "assignment_accuracy": 100.0
         }
     ]
 }
