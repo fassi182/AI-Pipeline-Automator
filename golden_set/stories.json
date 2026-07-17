@@ -1,19 +1,171 @@
 [
-    {
-        "id": 1,
-        "user_story": "As a user I want to register on the system using my email so that I can access the system.",
-        "expected_requirements": [
-            "The system shall allow the user to input an email address.",
-            "The system shall validate the email address.",
-            "The system shall ensure the email is not already registered.",
-            "The system shall send an email verification.",
-            "The system shall store the user's information after verification."
-        ],"expected_assignments": [
-    "Backend",
-    "Backend",
-    "Database",
-    "Backend",
-    "Backend"
-  ]
-    }
+  {
+    "id": 1,
+    "user_story": "As a user I want to register on the system using my email so that I can access the system.",
+    "expected_requirements": [
+      "The system shall allow the user to input this email address.",
+      "The system shall validate the email address entered by the user.",
+      "The system shall ensure that the email is not already registered.",
+      "The system shall send an email verification.",
+      "The system shall securely store the user's information after verification.",
+      "The system shall send an email verification after successful registration."
+    ],
+    "expected_assignments": ["Backend", "Backend", "Database", "Backend", "Database", "Backend"]
+  },
+  {
+    "id": 2,
+    "user_story": "As a user I want to login into the system using my email and password so that I can access my account and use the application securely.",
+    "expected_requirements": [
+      "The system shall allow users to log in using their email and password.",
+      "The system shall validate user credentials.",
+      "The system shall grant access only after successful authentication.",
+      "The system shall display an error message for invalid credentials.",
+      "The system shall maintain a secure user session after login."
+    ],
+    "expected_assignments": ["Backend", "Backend", "Backend", "Frontend", "Backend"]
+  },
+  {
+    "id": 3,
+    "user_story": "As a user i want to reset my password if i forget it so that i can regain access my account",
+    "expected_requirements": [
+      "The system shall allow users to request a password reset.",
+      "The system shall verify the registered email address.",
+      "The system shall generate a secure password reset token.",
+      "The system shall send a password reset link by email.",
+      "The system shall allow users to create a new password after successful verification."
+    ],
+    "expected_assignments": ["Frontend", "Backend", "Backend", "Backend", "Backend"]
+  },
+  {
+    "id": 4,
+    "user_story": "As a user I want to update my profile information so that my personal details remain up to date .",
+    "expected_requirements": [
+      "The system shall allow users to edit their profile information.",
+      "The system shall validate updated information.",
+      "The system shall save profile changes.",
+      "The system shall notify users when the update is successful."
+    ],
+    "expected_assignments": ["Frontend", "Backend", "Database", "Frontend"]
+  },
+  {
+    "id": 5,
+    "user_story": "As a user i want to upload my profile pic so that other users can recognize me",
+    "expected_requirements": [
+      "The system shall allow users to upload a profile picture.",
+      "The system shall accept supported image formats.",
+      "The system shall validate the uploaded file.",
+      "The system shall update the user's profile picture after a successful upload."
+    ],
+    "expected_assignments": ["Frontend", "Backend", "Backend", "Database"]
+  },
+  {
+    "id": 6,
+    "user_story": "As an admin i want to view all users that are registered so that i can manage all users accounts",
+    "expected_requirements": [
+      "The system shall allow administrators to view all registered users.",
+      "The system shall display user information in a list.",
+      "The system shall support searching and filtering users.",
+      "The system shall restrict this feature to administrators only."
+    ],
+    "expected_assignments": ["Backend", "Frontend", "Frontend", "Backend"]
+  },
+  {
+    "id": 7,
+    "user_story": "As an admin I want to deactivate a user's account so that suspended users cannot access the system.",
+    "expected_requirements": [
+      "The system shall allow administrators to deactivate user accounts.",
+      "The system shall prevent deactivated users from logging in.",
+      "The system shall update the user's account status.",
+      "The system shall record the account status change."
+    ],
+    "expected_assignments": ["Frontend", "Backend", "Database", "Database"]
+  },
+  {
+    "id": 8,
+    "user_story": "As a customer , I want to search for the products by name or category so that I can find the items quickly as needed.",
+    "expected_requirements": [
+      "The system shall provide a search feature for products.",
+      "The system shall allow searching by product name or category.",
+      "The system shall display matching search results.",
+      "The system shall notify the user when no products are found."
+    ],
+    "expected_assignments": ["Frontend", "Backend", "Frontend", "Frontend"]
+  },
+  {
+    "id": 9,
+    "user_story": "As a customer i want to able to add products to my shopping cart so that i can buy multiple items together and track the expense",
+    "expected_requirements": [
+      "The system shall allow customers to add products to the shopping cart.",
+      "The system shall update item quantities in the cart.",
+      "The system shall allow customers to remove items from the cart.",
+      "The system shall display the current cart contents with price of each product, total and subtotal."
+    ],
+    "expected_assignments": ["Backend", "Backend", "Backend", "Frontend"]
+  },
+  {
+    "id": 10,
+    "user_story": "As a customer i want to place an order so that i can purchase products online",
+    "expected_requirements": [
+      "The system shall allow customers to place an order.",
+      "The system shall validate the order before submission.",
+      "The system shall securely process payment information.",
+      "The system shall save the order details.",
+      "The system shall send an order confirmation to the customer."
+    ],
+    "expected_assignments": ["Frontend", "Backend", "Backend", "Database", "Backend"]
+  },
+  {
+    "id": 11,
+    "user_story": "As a customer i want to view list of history of my orders so that i can track my previous purchases",
+    "expected_requirements": [
+      "The system shall allow customers to view their previous orders.",
+      "The system shall display order details.",
+      "The system shall sort orders by date.",
+      "The system shall restrict users to viewing only their own orders."
+    ],
+    "expected_assignments": ["Backend", "Frontend", "Backend", "Backend"]
+  },
+  {
+    "id": 12,
+    "user_story": "As an employee , I want to submit my leave application online so that the manager can review it.",
+    "expected_requirements": [
+      "The system shall allow employees to submit leave requests.",
+      "The system shall validate leave request details.",
+      "The system shall store leave requests.",
+      "The system shall notify the manager of new requests."
+    ],
+    "expected_assignments": ["Frontend", "Backend", "Database", "Backend"]
+  },
+  {
+    "id": 13,
+    "user_story": "As a manager I want to approve or reject the employee's leave applications",
+    "expected_requirements": [
+      "The system shall allow managers to review leave requests.",
+      "The system shall allow managers to approve or reject requests.",
+      "The system shall update the leave request status.",
+      "The system shall notify employees of the decision."
+    ],
+    "expected_assignments": ["Frontend", "Backend", "Database", "Backend"]
+  },
+  {
+    "id": 14,
+    "user_story": "As a student i want to register in offered courses so that i can attend my classes",
+    "expected_requirements": [
+      "The system shall display available courses.",
+      "The system shall allow students to enroll in eligible courses.",
+      "The system shall verify course availability before enrollment.",
+      "The system shall update the student's enrollment record."
+    ],
+    "expected_assignments": ["Frontend", "Frontend", "Backend", "Database"]
+  },
+  {
+    "id": 15,
+    "user_story": "As an instructor , I want to upload the student's attendance so students can track their attendance.",
+    "expected_requirements": [
+      "The system shall allow instructors to upload attendance.",
+      "The system shall store uploaded attendance records.",
+      "The system shall make attendance records available to students."
+    ],
+    "expected_assignments": ["Frontend", "Database", "Frontend"]
+  }
 ]

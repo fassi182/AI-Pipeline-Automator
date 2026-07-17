@@ -8,10 +8,13 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --default-timeout=1000 -r requirements.txt
 
 # Copy project files
 COPY . .
 
-# Default command
-CMD ["python", "-m", "evaluation.run_evaluation"]
+# Run evaluation module
+ENTRYPOINT ["python", "-m", "evaluation.run_evaluation"]
+
+# Default mode
+CMD ["baseline"]

@@ -1,0 +1,98 @@
+{
+    "task_similarity": 82.88866666666667,
+    "keyword_overlap": 33.188,
+    "assignment_accuracy": 48.0,
+    "overall_score": 54.69222222222222,
+    "stories": [
+        {
+            "story_id": 1,
+            "task_similarity": 83.33,
+            "keyword_overlap": 50.0,
+            "assignment_accuracy": 50.0
+        },
+        {
+            "story_id": 2,
+            "task_similarity": 100.0,
+            "keyword_overlap": 30.3,
+            "assignment_accuracy": 80.0
+        },
+        {
+            "story_id": 3,
+            "task_similarity": 100.0,
+            "keyword_overlap": 40.74,
+            "assignment_accuracy": 80.0
+        },
+        {
+            "story_id": 4,
+            "task_similarity": 80.0,
+            "keyword_overlap": 47.37,
+            "assignment_accuracy": 25.0
+        },
+        {
+            "story_id": 5,
+            "task_similarity": 80.0,
+            "keyword_overlap": 39.13,
+            "assignment_accuracy": 50.0
+        },
+        {
+            "story_id": 6,
+            "task_similarity": 80.0,
+            "keyword_overlap": 25.0,
+            "assignment_accuracy": 50.0
+        },
+        {
+            "story_id": 7,
+            "task_similarity": 80.0,
+            "keyword_overlap": 31.82,
+            "assignment_accuracy": 25.0
+        },
+        {
+            "story_id": 8,
+            "task_similarity": 80.0,
+            "keyword_overlap": 19.23,
+            "assignment_accuracy": 25.0
+        },
+        {
+            "story_id": 9,
+            "task_similarity": 80.0,
+            "keyword_overlap": 17.24,
+            "assignment_accuracy": 75.0
+        },
+        {
+            "story_id": 10,
+            "task_similarity": 100.0,
+            "keyword_overlap": 40.91,
+            "assignment_accuracy": 60.0
+        },
+        {
+            "story_id": 11,
+            "task_similarity": 80.0,
+            "keyword_overlap": 27.27,
+            "assignment_accuracy": 75.0
+        },
+        {
+            "story_id": 12,
+            "task_similarity": 80.0,
+            "keyword_overlap": 41.18,
+            "assignment_accuracy": 50.0
+        },
+        {
+            "story_id": 13,
+            "task_similarity": 80.0,
+            "keyword_overlap": 26.32,
+            "assignment_accuracy": 50.0
+        },
+        {
+            "story_id": 14,
+            "task_similarity": 80.0,
+            "keyword_overlap": 23.81,
+            "assignment_accuracy": 25.0
+        },
+        {
+            "story_id": 15,
+            "task_similarity": 60.0,
+            "keyword_overlap": 37.5,
+            "assignment_accuracy": 0.0
+        }
+    ]
+}

@@ -1,6 +1,29 @@
 import json
+import os
+import sys
 
-from Ai_pipeline import run_pipeline
+# ----------------------------
+# Choose which pipeline to run
+# ----------------------------
+if len(sys.argv) > 1:
+    mode = sys.argv[1].lower()
+else:
+    mode = "baseline"
+
+if mode == "baseline":
+    from Ai_pipeline import run_pipeline
+    output_file = "evaluation/results/baseline.json"
+
+elif mode == "latest":
+    from Ai_pipeline_v2 import run_pipeline
+    output_file = "evaluation/results/latest.json"
+
+else:
+    print("Usage:")
+    print("python -m evaluation.run_evaluation baseline")
+    print("python -m evaluation.run_evaluation latest")
+    sys.exit()
+
 from modules.assignment import assign_tasks
 from evaluation.scoring import (
     task_count_similarity,
@@ -8,66 +31,84 @@ from evaluation.scoring import (
     assignment_accuracy,
 )
 
-# Load the Golden Set
+# ----------------------------
+# Load Golden Set
+# ----------------------------
+
 with open("golden_set/stories.json", "r") as file:
     stories = json.load(file)
 
-total_task_score = 0
-total_keyword_score = 0
-total_assignment_score = 0
+results = []
+
+total_task = 0
+total_keyword = 0
+total_assignment = 0
 
 print("=" * 50)
-print("Running First Evaluation Pass")
+print(f"Running {mode.capitalize()} Evaluation")
 print("=" * 50)
 
 for story in stories:
 
-    user_story = story["user_story"]
+    generated_requirements = run_pipeline(
+        story["user_story"]
+    )
 
-    expected_requirements = story["expected_requirements"]
-    expected_assignments = story["expected_assignments"]
+    generated_assignments = assign_tasks(
+        generated_requirements
+    )
 
-    # Run AI Pipeline (M1)
-    generated_requirements = run_pipeline(user_story)
-
-    # Run Assignment Engine (M4)
-    generated_assignments = assign_tasks(generated_requirements)
-
-    # Evaluate M1
     task_score = task_count_similarity(
-        expected_requirements,
+        story["expected_requirements"],
         generated_requirements,
     )
 
     keyword_score = keyword_overlap(
-        expected_requirements,
+        story["expected_requirements"],
         generated_requirements,
     )
 
-    # Evaluate M4
     assignment_score = assignment_accuracy(
-        expected_assignments,
+        story["expected_assignments"],
         generated_assignments,
     )
 
-    total_task_score += task_score
-    total_keyword_score += keyword_score
-    total_assignment_score += assignment_score
+    total_task += task_score
+    total_keyword += keyword_score
+    total_assignment += assignment_score
 
-    print(f"\nStory ID: {story['id']}")
-    print(f"Task Count Similarity : {task_score}%")
-    print(f"Keyword Overlap       : {keyword_score}%")
-    print(f"Assignment Accuracy   : {assignment_score}%")
+    results.append(
+        {
+            "story_id": story["id"],
+            "task_similarity": task_score,
+            "keyword_overlap": keyword_score,
+            "assignment_accuracy": assignment_score,
+        }
+    )
 
 number_of_stories = len(stories)
 
-average_task_score = total_task_score / number_of_stories
-average_keyword_score = total_keyword_score / number_of_stories
-average_assignment_score = total_assignment_score / number_of_stories
+average_task = total_task / number_of_stories
+average_keyword = total_keyword / number_of_stories
+average_assignment = total_assignment / number_of_stories
 
-print("\n" + "=" * 50)
-print("Baseline Scores")
-print("=" * 50)
-print(f"Average Task Count Similarity : {average_task_score:.2f}%")
-print(f"Average Keyword Overlap       : {average_keyword_score:.2f}%")
-print(f"Average Assignment Accuracy   : {average_assignment_score:.2f}%")
+overall = (
+    average_task
+    + average_keyword
+    + average_assignment
+) / 3
+
+data = {
+    "task_similarity": average_task,
+    "keyword_overlap": average_keyword,
+    "assignment_accuracy": average_assignment,
+    "overall_score": overall,
+    "stories": results,
+}
+
+os.makedirs("evaluation/results", exist_ok=True)
+
+with open(output_file, "w") as file:
+    json.dump(data, file, indent=4)
+
+print("\nResults saved to:", output_file)
