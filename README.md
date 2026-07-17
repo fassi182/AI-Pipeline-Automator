@@ -12,6 +12,8 @@ The architecture is designed so that different AI models can be
 evaluated by replacing only the pipeline implementation while keeping
 the testing and evaluation framework unchanged.
 
+***live demo of dashboard:*** https://aipipelineevaluationframework-jssekps4tobevzi2psns8w.streamlit.app/
+
 ## Technology Stack
 
 -   Python 3.11
